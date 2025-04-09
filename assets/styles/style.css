@@ -1,0 +1,144 @@
+/* Algemene stijlen voor de body en de achtergrond */
+body {
+  font-family: 'DM Serif Display', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  color: #3e3e3e;
+  background-image: url('../images/aroma-image.jpg'); /* Parallax in de hele body */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Headerstijl */
+header {
+  background-color: rgba(211, 230, 221, 0.9); /* Lichtere doorzichtige kleur */
+  color: #2b3b2b;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Navigatie-stijl */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Stijlen voor navigatielinks */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  color: #2b3b2b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero-sectie */
+.hero {
+  height: 80vh; /* Zorg ervoor dat deze hoogte voldoende is */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 2;
+  background-color: rgba(79, 92, 79, 0.4); /* Transparante overlay om tekst leesbaar te maken */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Stijlen voor secties met transparante achtergrond */
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.8); /* Lichte doorzichtige achtergrond voor secties */
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+/* Sectie koptekst */
+section h2 {
+  color: #2b3b2b;
+  font-size: 2rem;
+}
+
+/* Footerstijl */
+footer {
+  background-color: rgba(211, 230, 221, 0.7); /* Lichtere doorzichtige kleur */
+  color: #2b3b2b;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Stijlen voor contactboxen */
+.contact-box {
+  background-color: rgba(249, 249, 249, 0.9); /* Lichte doorzichtige achtergrond voor contactboxen */
+  border: 1px solid #d4e5e2;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* Stijl voor de email-link */
+.email-link {
+  color: #2b3b2b; /* Kies een kleur die past bij de tekstkleur van je website */
+  text-decoration: none; /* Verwijder de standaard onderstreping */
+  border-bottom: 1px solid transparent; /* Zorg ervoor dat de onderlijn transparant is in de normale staat */
+  font-weight: normal; /* Verwijder eventuele vette tekst */
+}
+
+.email-link:hover {
+  color: #4a6f4a; /* Lichte kleurverandering wanneer je over de link zweeft */
+  text-decoration: underline; /* Optionele onderstreping wanneer je over de link zweeft */
+}
+
+/* Media query voor kleinere schermen */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .hero {
+    height: 60vh; /* Minder hoogte op kleinere schermen */
+    padding: 2rem 1rem; /* Meer padding op kleine schermen */
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 1.5rem 1rem;
+  }
+}
